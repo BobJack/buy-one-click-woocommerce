@@ -134,7 +134,7 @@ class BuyCore {
             add_action($position, array($this, 'styleAddFrontPage')); //Стили фронта
             add_action($position, array($this, 'scriptAddFrontPage')); //Скрипты фронта
             add_action($position, array('BuyFunction', 'viewBuyButton')); //Кнопка заказать
-            add_action($position, array('BuyFunction', 'viewBuyForm')); //Форма заказа
+            add_action('wp_footer', array('BuyFunction', 'viewBuyForm')); //Форма заказа
             add_action($position, array('BuyFunction', 'viewBuyMessage')); //Дополнительное сообщение
         }
         add_action('admin_menu', array($this, 'adminOptions'));
